@@ -35,3 +35,25 @@ mesh = SubResource("BoxMesh_wle6m")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.889264, -1.23769)
 shape = SubResource("BoxShape3D_7qmqw")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.999934, -0.00187182, -0.0113658, 5.40768e-05, -0.985935, 0.16713, -0.0115188, -0.167119, -0.985869, 0.552467, 2.41661, -5.96971)
+layers = 6
+light_color = Color(0.650336, 0.66381, 0.925497, 1)
+light_energy = 7.564
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_normal_bias = 3.917
+spot_range = 10.902
+spot_angle = 25.3634
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SpotLight3D"]
+transform = Transform3D(0.999934, -0.00187182, -0.0113658, 5.40768e-05, -0.985935, 0.16713, -0.0115188, -0.167119, -0.985869, 0.552467, 2.41661, -5.96971)
+layers = 6
+light_color = Color(0.650336, 0.66381, 0.925497, 1)
+light_energy = 7.564
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_normal_bias = 3.917
+spot_range = 10.902
+spot_angle = 25.3634
