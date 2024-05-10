@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bom5uc3uicoq"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_oui1j"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8qr02"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kiu6g"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00093, 0)
+script = ExtResource("1_oui1j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_8qr02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_kiu6g")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.465678, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.999972, 0, -0.00745249, 0, 1, 0, 0.00745249, 0, 0.999972, 0, 0.473659, 0)
+light_energy = 0.5
+shadow_enabled = true
+metadata/_edit_group_ = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="OmniLight3D"]
+visible = false
+light_color = Color(0, 1, 0, 1)
+light_energy = 0.3
+light_size = 0.5
+shadow_enabled = true
+omni_range = 30.0
+omni_attenuation = 0.0103087
